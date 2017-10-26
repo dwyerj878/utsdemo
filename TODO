@@ -1,0 +1,7 @@
+1) get undertow working - DONE
+2) add CDI - DONE
+3) add Camel - DONE
+
+4) split utils and app into modules
+5) add deltaspike and externalize properties
+6) add hibernate
