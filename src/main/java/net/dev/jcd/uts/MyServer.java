@@ -10,6 +10,13 @@ import javax.ws.rs.core.Application;
 import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
 import org.jboss.resteasy.spi.ResteasyDeployment;
 
+/**
+ * 
+ * Create and start Undertow with CDI
+ * 
+ * @author jcdwyer
+ *
+ */
 public class MyServer {
 
     private final UndertowJaxrsServer server = new UndertowJaxrsServer();

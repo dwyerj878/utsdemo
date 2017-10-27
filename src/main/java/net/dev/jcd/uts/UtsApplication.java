@@ -16,6 +16,7 @@ public class UtsApplication extends Application {
         Set<Class<?>> resources = new LinkedHashSet<Class<?>>();
         resources.add(UtsResource.class);
         resources.add(TimeResource.class);
+        resources.add(UserResource.class);
         return resources;
     }
 

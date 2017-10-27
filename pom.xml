@@ -39,6 +39,22 @@
 			<version>${resteasy.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.jboss.resteasy</groupId> -->
+<!-- 			<artifactId>resteasy-jaxb-provider</artifactId> -->
+<!-- 			<version>${resteasy.version}</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
 			<version>3.0.0.Alpha1</version>
@@ -61,34 +77,19 @@
 			<artifactId>camel-core</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.camel</groupId> -->
-		<!-- <artifactId>camel-jms</artifactId> -->
-		<!-- <version>${camel.version}</version> -->
-		<!-- </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-cdi -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-cdi</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-amqp -->
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-amqp</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
-
-
-		<!-- https://mvnrepository.com/artifact/org.apache.qpid/proton -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.qpid</groupId> -->
-		<!-- <artifactId>proton</artifactId> -->
-		<!-- <version>0.3</version> -->
-		<!-- </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.apache.qpid/proton-j -->
 		<dependency>
 			<groupId>org.apache.qpid</groupId>
 			<artifactId>proton-j</artifactId>
@@ -120,18 +121,40 @@
 			<artifactId>netty-codec-http</artifactId>
 			<version>4.1.16.Final</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.qpid/qpid-jms-client -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.apache.qpid</groupId> -->
-		<!-- <artifactId>qpid-jms-client</artifactId> -->
-		<!-- <version>0.26.0</version> -->
-		<!-- </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.apache.qpid/qpid-client -->
 		<dependency>
 			<groupId>org.apache.qpid</groupId>
 			<artifactId>qpid-client</artifactId>
 			<version>6.1.4</version>
 		</dependency>
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.12.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derby -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.14.1.0</version>
+		</dependency>
+
+
 
 	</dependencies>
 
@@ -144,6 +167,8 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<debug>true</debug>
+					<debuglevel>lines,vars</debuglevel>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -30,7 +30,8 @@ public class Send {
 			MessageProducer messageProducer = session.createProducer(destination);
 			MessageConsumer messageConsumer = session.createConsumer(destination);
 			MapMessage message = session.createMapMessage();
-			message.setString("id", "12345");
+			message.setInt("id", 12345);
+			message.setString("name", "Fred");
 			messageProducer.send(message);
 
 //			message = (TextMessage) messageConsumer.receive();

@@ -1,18 +1,25 @@
 package net.dev.jcd.uts;
 
 import javax.enterprise.inject.Produces;
+import javax.inject.Named;
 
 import org.apache.camel.component.amqp.AMQPComponent;
 import org.apache.qpid.client.PooledConnectionFactory;
 import org.apache.qpid.url.URLSyntaxException;
 
+/**
+ * 
+ * Prepare application for Camel CDI
+ * 
+ * @author jcdwyer
+ *
+ */
 public class CdiComp {
 //	@PropertyInject("jms.maxConnections")
 //	int maxConnections;
 
 	@Produces
-//	@Named("cfx")
-//	@ApplicationScoped
+	@Named("cfx")
 	AMQPComponent cfx() {
 		String cfs = "amqp://guest:guest@client/dev?brokerlist='tcp://localhost:5672'";
 		
@@ -38,6 +45,6 @@ public class CdiComp {
 //	  
 //
 //	}
-	
+
 //	 
 }
