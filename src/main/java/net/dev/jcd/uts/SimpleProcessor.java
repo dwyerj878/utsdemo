@@ -26,7 +26,7 @@ public class SimpleProcessor {
 	 * @return
 	 * @throws Exception
 	 */
-	public HashMap<String, Object> process(Map map) throws Exception {
+	public HashMap<String, Object> process(Map<String, Object> map) throws Exception {
 		LOG.info("process :"+map);
 		LOG.info("process :"+map.get("id") + map.get("name"));
 		

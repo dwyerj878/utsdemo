@@ -6,6 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 
 import org.jboss.logging.Logger;
 
@@ -28,21 +29,28 @@ public class UserDAO {
 	 * @param ID
 	 * @param name
 	 */
+	@Transactional(Transactional.TxType.REQUIRED)
 	public void save(int ID, String name) {
 		LOG.info("save " + ID + " " + name);
+		em.getTransaction().begin();
 		User u = new User();
 		u.setID(ID);
 		u.setName(name);
 		em.persist(u);
-		em.flush();
+		
+//		em.flush();
+		em.getTransaction().commit();
+		
 	}
 
 	/**
 	 * @return
 	 */
 	public List<User> getUsers() {
+		LOG.debug("Find users");
 		TypedQuery<User> q = em.createQuery("select u from User u", User.class);
 		List<User> r = q.getResultList();
+		LOG.debug("found "+r.size()+"users");
 		return r;
 	}
 }

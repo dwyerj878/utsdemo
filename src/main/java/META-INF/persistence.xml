@@ -18,6 +18,7 @@
 			
 			<property name="show_sql" value="true"/>
 			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+			<property name="hibernate.flushMode" value="FLUSH_AUTO" />
 		</properties>
 	</persistence-unit>
 </persistence>

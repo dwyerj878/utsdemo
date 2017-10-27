@@ -5,6 +5,7 @@ import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.transaction.TransactionManager;
 
 import org.jboss.logging.Logger;
 
@@ -33,4 +34,9 @@ public class SimpleDBEntityManagerProducer {
     	LOG.info("close");
         entityManager.close();
     }
+    
+//    @Produces
+//    TransactionManager createTM() {
+//    	tm = new HibernateTransactionManager();
+//    }
 }
