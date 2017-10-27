@@ -21,12 +21,12 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_XML)
-//    public Response getUsers(){
-    public List<User> getUsers(){
+    public Response getUsers(){
+//    public List<User> getUsers(){
         List<User> r = userDao.getUsers();
-        return r;
-//        GenericEntity<List<User>> entity = new GenericEntity<List<User>>(r) {};
-//        Response response = Response.ok(entity).build();
-//        return response;
+//        return r;
+        GenericEntity<List<User>> entity = new GenericEntity<List<User>>(r) {};
+        Response response = Response.ok(entity).build();
+        return response;
     }
 }
