@@ -1,4 +1,4 @@
-package net.dev.jcd.uts;
+package net.dev.jcd.uts.services;
 
 import java.util.Date;
 

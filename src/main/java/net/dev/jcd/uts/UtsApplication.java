@@ -7,17 +7,22 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+import net.dev.jcd.uts.ws.TimeResource;
+import net.dev.jcd.uts.ws.UserResource;
+import net.dev.jcd.uts.ws.UtsResource;
+
 @ApplicationScoped
 @ApplicationPath("/rest")
 public class UtsApplication extends Application {
+	;
 
-    @Override
-    public Set<Class<?>> getClasses() {
-        Set<Class<?>> resources = new LinkedHashSet<Class<?>>();
-        resources.add(UtsResource.class);
-        resources.add(TimeResource.class);
-        resources.add(UserResource.class);
-        return resources;
-    }
+	@Override
+	public Set<Class<?>> getClasses() {
+		Set<Class<?>> resources = new LinkedHashSet<Class<?>>();
+		resources.add(UtsResource.class);
+		resources.add(TimeResource.class);
+		resources.add(UserResource.class);
+		return resources;
+	}
 
 }

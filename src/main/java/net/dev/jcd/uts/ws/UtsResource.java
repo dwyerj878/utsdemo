@@ -1,4 +1,4 @@
-package net.dev.jcd.uts;
+package net.dev.jcd.uts.ws;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,7 +1,8 @@
-package net.dev.jcd.uts;
+package net.dev.jcd.uts.ws;
 
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -20,6 +21,7 @@ public class UserResource {
 	UserDAO userDao;
 
     @GET
+    @RolesAllowed("USERS")
     @Produces(MediaType.APPLICATION_XML)
     public Response getUsers(){
 //    public List<User> getUsers(){

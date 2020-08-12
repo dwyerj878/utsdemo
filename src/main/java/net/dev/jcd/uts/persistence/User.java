@@ -10,14 +10,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * @author jcdwyer
+ * 
+ * @author jcdwyer@jcd-dev.net
  *
  */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity(name = "User")
 @Table(name = "USERS")
-
 public class User {
 	
 	@Id

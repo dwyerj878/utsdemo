@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
-	<persistence-unit name="SimpleDB">
-		<description>This unit manages orders and customers.
-			It does not rely on any vendor-specific features and can
-			therefore be deployed to any persistence provider.
-		</description>
-		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<properties> 
-			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			
-			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
-			
-			<property name="javax.persistence.jdbc.url"    value="jdbc:derby:/home/jcdwyer/MyDB;create=true" />
-			<property name="javax.persistence.jdbc.user" value="admin" />
-			<property name="javax.persistence.jdbc.password" value="admin" />
-			
-			<property name="show_sql" value="true"/>
-			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
-			<property name="hibernate.flushMode" value="FLUSH_AUTO" />
-		</properties>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="uts-demo">
 	</persistence-unit>
 </persistence>

@@ -1,4 +1,4 @@
-package net.dev.jcd.uts;
+package net.dev.jcd.uts.routes;
 
 
 import org.apache.camel.LoggingLevel;
