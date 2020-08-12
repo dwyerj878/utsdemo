@@ -14,7 +14,6 @@ import net.dev.jcd.uts.ws.UtsResource;
 @ApplicationScoped
 @ApplicationPath("/rest")
 public class UtsApplication extends Application {
-	;
 
 	@Override
 	public Set<Class<?>> getClasses() {

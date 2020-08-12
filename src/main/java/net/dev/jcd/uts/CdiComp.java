@@ -21,7 +21,7 @@ public class CdiComp {
 	@Produces
 	@Named("cfx")
 	AMQPComponent cfx() {
-		String cfs = "amqp://guest:guest@client/dev?brokerlist='tcp://localhost:5672'";
+		String cfs = "amqp://guest:guest@client/test?brokerlist='tcp://localhost:5672'";
 		
 		PooledConnectionFactory cx = new PooledConnectionFactory();
 		try {
