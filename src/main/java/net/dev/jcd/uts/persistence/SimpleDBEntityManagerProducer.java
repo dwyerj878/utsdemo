@@ -8,7 +8,7 @@ import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
-import javax.transaction.TransactionManager;
+import jakarta.transaction.TransactionManager;
 
 import org.apache.deltaspike.core.api.config.ConfigProperty;
 import org.apache.deltaspike.core.api.config.ConfigResolver;

@@ -9,11 +9,12 @@ import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 
 import javax.inject.Inject;
-import javax.servlet.ServletException;
-import javax.ws.rs.core.Application;
+import jakarta.servlet.ServletException;
+import jakarta.ws.rs.core.Application;
 
 import org.apache.deltaspike.core.api.config.ConfigProperty;
 import org.apache.deltaspike.core.api.config.ConfigResolver;
+import org.jboss.resteasy.core.ResteasyDeploymentImpl;
 import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
 import org.jboss.resteasy.spi.ResteasyDeployment;
 
@@ -35,7 +36,7 @@ public class MyServer {
 	}
 
 	public DeploymentInfo deployApplication(String appPath, Class<? extends Application> applicationClass) {
-		ResteasyDeployment deployment = new ResteasyDeployment();
+		ResteasyDeployment deployment = new ResteasyDeploymentImpl();
 		deployment.setInjectorFactoryClass("org.jboss.resteasy.cdi.CdiInjectorFactory");
 
 		deployment.setApplicationClass(applicationClass.getName());

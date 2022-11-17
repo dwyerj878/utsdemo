@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 import org.jboss.logging.Logger;
 
