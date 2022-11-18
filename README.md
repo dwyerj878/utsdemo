@@ -31,7 +31,11 @@ docker inspect de914f21e120 | grep IPAddress
                     "IPAddress": "172.17.0.2",
 
 
-default url http://172.17.0.2:8081/myApp/hello
+sample default
+- http://172.17.0.2:8081/myApp/hello
+
+sample resteasy url
+- https://127.0.0.1:8443/myApp/rest/uts
 
 ## create key
 
