@@ -1,6 +1,16 @@
 
 #Notes
 
+## Add command line processing
+
+usage: MyServer
+ -b,--bind <arg>          bind to address
+ -d,--debug               Turn on debugging
+ -h,--help                show help
+ -k,--keyfile <arg>       pcs12/rsa keyfile
+ -p,--port <arg>          Set the port
+ -s,--ssl                 Turn on ssl
+ -w,--keypassword <arg>   keyfile password
 
 
 
@@ -22,3 +32,8 @@ docker inspect de914f21e120 | grep IPAddress
 
 
 default url http://172.17.0.2:8081/myApp/hello
+
+## create key
+
+$JAVA_HOME/bin/keytool -genkeypair -alias uts-tls -keyalg RSA -dname "cn=uts, ou=apps, o=jcd-dev.net, c=US" -validity 365 -keystore keystore.pfx -keypass mypa55wd -storepass myspa55wd -v
+
