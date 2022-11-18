@@ -1,6 +1,13 @@
 
 #Notes
 
+## maven 
+
+mvn clean dependency:copy-dependencies install
+
+target/dependenct
+target/uts-demo-xxx.jar
+
 ## Add command line processing
 
 usage: MyServer
